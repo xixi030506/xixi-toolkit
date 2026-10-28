@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE4E8"/><stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="stampGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB7185"/><stop offset="100%" stop-color="#E11D48"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="36" fill="url(#bgGrad)"/>
+  <g>
+    <path d="M145 148 Q175 142 172 118 Q169 102 155 112" fill="none" stroke="#57363B" stroke-width="8" stroke-linecap="round"/>
+    <path d="M54 84 L46 38 Q72 42 86 54 Q100 50 114 54 Q128 42 154 38 L146 84 Q162 104 148 130 L146 158 Q100 168 54 158 L52 130 Q38 104 54 84 Z" fill="#FFF9F5" stroke="#57363B" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M55 72 L52 46 Q68 49 78 58 Z" fill="#FDA4AF"/>
+    <path d="M145 72 L148 46 Q132 49 122 58 Z" fill="#FDA4AF"/>
+    <ellipse cx="76" cy="95" rx="10.5" ry="11.5" fill="#4A2C32"/><circle cx="73" cy="91" r="4" fill="#FFFFFF"/>
+    <ellipse cx="124" cy="95" rx="10.5" ry="11.5" fill="#4A2C32"/><circle cx="121" cy="91" r="4" fill="#FFFFFF"/>
+    <ellipse cx="58" cy="106" rx="8" ry="4.5" fill="#FB7185" opacity="0.55"/>
+    <ellipse cx="142" cy="106" rx="8" ry="4.5" fill="#FB7185" opacity="0.55"/>
+    <polygon points="100,101 96,106 104,106" fill="#F43F5E"/>
+    <path d="M90 110 Q95 116 100 109 Q105 116 110 110" fill="none" stroke="#57363B" stroke-width="3.5" stroke-linecap="round"/>
+    <g transform="translate(100, 142) rotate(-14)">
+      <path d="M-12 -32 C-16 -48, 16 -48, 12 -32 L16 -8 L-16 -8 Z" fill="url(#stampGrad)" stroke="#57363B" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="-34" y="-10" width="68" height="26" rx="8" fill="#FDA4AF" stroke="#57363B" stroke-width="4"/>
+      <rect x="-30" y="6" width="60" height="14" rx="5" fill="#E11D48" stroke="#57363B" stroke-width="3.5"/>
+      <circle cx="0" cy="-26" r="4" fill="#FFE4E8"/>
+    </g>
+    <ellipse cx="74" cy="132" rx="12" ry="9" transform="rotate(15 74 132)" fill="#FFF9F5" stroke="#57363B" stroke-width="4"/>
+    <ellipse cx="122" cy="128" rx="12" ry="9" transform="rotate(-15 122 128)" fill="#FFF9F5" stroke="#57363B" stroke-width="4"/>
+  </g>
+</svg>

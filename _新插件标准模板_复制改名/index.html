@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>🧩 西西新插件标准模板</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body class="min-h-screen bg-[#FFFDF9] text-[#4A353B] p-6 font-sans">
+  <div class="max-w-3xl mx-auto space-y-4">
+    <div class="flex items-center justify-between bg-white p-4 rounded-2xl border-2 border-rose-200 shadow-xs">
+      <button id="btnBackToHub" onclick="window.pywebview && window.pywebview.api.go_home()" class="px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-black text-xs cursor-pointer">
+        ⬅️ 返回工具包
+      </button>
+      <h1 class="text-base font-black text-rose-950">🧩 西西新插件标准模板</h1>
+      <span id="statusBadge" class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">等待连接后台...</span>
+    </div>
+
+    <div class="bg-white p-6 rounded-3xl border-2 border-rose-200 shadow-xs space-y-3">
+      <h2 class="text-sm font-black text-rose-900">🚀 如何使用此模板开发新插件？</h2>
+      <ol class="text-xs text-rose-800 space-y-2 list-decimal list-inside leading-relaxed">
+        <li>将根目录下的 <code>_新插件标准模板_复制改名</code> 复制一份，去掉开头的下划线 <code>_</code>（例如改名为 <code>西西图片工坊</code>）。</li>
+        <li>修改本文件 <code>index.html</code> 编写界面，修改同级的 <code>template_backend.py</code> 编写 Python 硬盘读写逻辑。</li>
+        <li>如果用到了新的 Python 第三方库，直接写进同级的 <code>requirements.txt</code> 中，启动器打开插件时会自动检索并安装！</li>
+      </ol>
+      <pre id="backendEcho" class="p-3 rounded-xl bg-rose-50 border border-rose-200 text-xs font-mono text-rose-900">正在读取后台数据...</pre>
+    </div>
+  </div>
+
+  <script>
+    async function initTemplatePlugin() {
+      if (window.pywebview && window.pywebview.api) {
+        const res = await window.pywebview.api.get_plugin_init_data();
+        document.getElementById('statusBadge').textContent = '✅ 已连通 Python 后台';
+        document.getElementById('statusBadge').className = 'text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold';
+        document.getElementById('backendEcho').textContent = JSON.stringify(res, null, 2);
+      }
+    }
+    window.addEventListener('pywebviewready', initTemplatePlugin);
+    window.addEventListener('DOMContentLoaded', () => setTimeout(initTemplatePlugin, 200));
+  </script>
+</body>
+</html>

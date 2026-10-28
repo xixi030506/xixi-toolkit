@@ -1,0 +1,10 @@
+{
+  "id": "stamp_studio",
+  "name": "西西盖章局",
+  "subtitle": "PDF/Word 强力防删水印与印章工坊",
+  "icon": "🌸",
+  "color": "rose",
+  "category": "doc",
+  "entry": "v5_pdf.html",
+  "enabled": true
+}

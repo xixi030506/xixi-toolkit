@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "id": "doc",
+      "name": "📄 文档与办公"
+    },
+    {
+      "id": "media",
+      "name": "🎨 视觉与画布"
+    },
+    {
+      "id": "disk",
+      "name": "⚡ 批量与系统"
+    },
+    {
+      "id": "cat_1792927650851_4",
+      "name": "📁 插件"
+    }
+  ],
+  "pluginCategories": {
+    "custom_图片格式转换": "media"
+  },
+  "pluginPaths": {},
+  "hiddenPlugins": [
+    "custom_图片格式转换"
+  ],
+  "scanMode": "smart",
+  "viewMode": "split"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "我的新插件",
+  "subtitle": "复制此文件夹并改名即可被启动器自动识别",
+  "icon": "🧩",
+  "color": "emerald",
+  "category": "custom",
+  "entry": "index.html",
+  "enabled": true
+}

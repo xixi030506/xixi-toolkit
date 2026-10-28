@@ -1,0 +1,10 @@
+{
+  "id": "custom_图片格式转换",
+  "name": "图片格式转换",
+  "subtitle": "转换格式",
+  "icon": "🎨",
+  "color": "emerald",
+  "category": "media",
+  "entry": "index.html",
+  "enabled": true
+}

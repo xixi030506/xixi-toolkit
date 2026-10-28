@@ -1,0 +1,3 @@
+# 西西盖章局 · 插件依赖库清单
+# 若后续在该插件后台扩展了第三方库（如 PyMuPDF / python-docx / Pillow），直接按行写在下方即可：
+pywebview>=4.0.0

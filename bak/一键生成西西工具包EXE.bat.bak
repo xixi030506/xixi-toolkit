@@ -1,0 +1,27 @@
+@echo off
+chcp 65001 >nul 2>&1
+cd /d "%~dp0"
+title 西西工具包 - 一键生成总控 EXE
+
+set "PY_EXE="
+for /f "delims=" %%I in ('where python 2^>nul') do (
+    "%%~I" -c "import sys; assert sys.version_info >= (3, 7)" >nul 2>&1 && set "PY_EXE=%%~I" && goto :FOUND_PY
+)
+for %%P in (
+    "%LocalAppData%\Programs\Python\Python313\python.exe"
+    "%LocalAppData%\Programs\Python\Python312\python.exe"
+    "%LocalAppData%\Programs\Python\Python311\python.exe"
+    "%LocalAppData%\Programs\Python\Python310\python.exe"
+    "C:\Python312\python.exe"
+    "C:\Python311\python.exe"
+    "D:\Python312\python.exe"
+) do if exist %%P set "PY_EXE=%%~P" && goto :FOUND_PY
+
+echo [!] 未检测到 Python 环境，请先安装 Python 3.10+ 并勾选 Add Python to PATH！
+pause
+exit /b 1
+
+:FOUND_PY
+"%PY_EXE%" "xixi_toolkit_launcher.py" --build-exe
+echo.
+pause
